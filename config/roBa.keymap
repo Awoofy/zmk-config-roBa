@@ -67,21 +67,21 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp L         &kp U         &kp COMMA                    &kp PERIOD                                                            &kp F        &kp W  &kp R  &kp Y  &kp P
-&mt LCTRL E       &kp I         &kp A         &kp O                        &kp MINUS      &kp APOS                         &kp NON_US_BACKSLASH  &kp K        &kp T  &kp N  &kp S  &kp H
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp SEMICOLON  &kp EQUAL                        &kp SLASH             &kp G        &kp D  &kp M  &kp Z  &kp B
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE    &lt_to_layer_0 3 LEFT_SHIFT      &kp BACKSPACE         &lt 1 ENTER                       &kp J
+&kp Q             &kp L         &kp U         &kp COMMA                    &kp PERIOD                                                                 &kp F        &kp W  &kp R  &kp Y  &kp P
+&mt LCTRL E       &kp I         &kp A         &kp O                        &kp MINUS      &kp APOS                              &kp NON_US_BACKSLASH  &kp K        &kp T  &kp N  &kp S  &kp H
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp SEMICOLON  &kp EQUAL                             &kp SLASH             &kp G        &kp D  &kp M  &kp Z  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE    &lt_to_layer_0 3 INTERNATIONAL_5      &kp BACKSPACE         &lt 1 ENTER                       &kp J
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        NUMandFUNC {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp F5           &kp F4           &kp F3           &kp F2           &kp F1                                 &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans       &none    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0
+&kp F5           &kp F4           &kp F3           &kp F2           &kp F1           &kp F12      &kp F11  &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
+&trans           &trans           &trans           &trans           &trans           &trans       &trans   &trans                                                              &none
             >;
         };
 
