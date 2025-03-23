@@ -64,7 +64,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        ohnishi_layer {
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA                    &kp PERIOD                                                                 &kp F        &kp W  &kp R  &kp Y  &kp P
 &mt LCTRL E       &kp I         &kp A         &kp O                        &kp MINUS      &kp APOS                              &kp NON_US_BACKSLASH  &kp K        &kp T  &kp N  &kp S  &kp H
@@ -97,10 +97,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &none   &none   &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp Q      &kp W     &kp E     &kp R      &kp T                                &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S     &kp D     &kp F      &kp G      &kp APOS       &kp MINUS  &kp H      &kp J  &kp K      &kp L    &kp SEMI
+&kp Z      &kp X     &kp C     &kp V      &kp B      &kp GRAVE      &kp EQUAL  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &kp SPACE  &trans         &kp BSPC   &kp ENTER                             &kp BSLH
             >;
         };
 
