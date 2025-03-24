@@ -61,11 +61,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
     };
@@ -76,9 +79,20 @@
         Default {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                 &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                 &kp G                 &trans                          &kp MINUS  &kp H        &kp J  &kp K      &kp L    &kp SEMI
-&kp Z      &kp X         &kp C         &kp V                 &kp B                 &to 5                           &kp EQUAL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 2 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BSPC   &lt 1 ENTER                             &lt 3 LEFT_GUI
+&kp A      &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE                      &kp MINUS  &kp H        &kp J  &kp K      &kp L    &kp SEMI
+&kp Z      &kp X         &kp C         &kp V                 &kp B                 &to 1                           &kp EQUAL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &kp BSPC   &lt 2 ENTER                             &lt 5 LEFT_GUI
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        Onishi_layer {
+            bindings = <
+&kp Q             &kp L         &kp U         &kp COMMA             &kp DOT                                                          &kp F        &kp W  &kp R  &kp Y  &kp P
+&mt LCTRL E       &kp I         &kp A         &kp O                 &kp FSLH              &kp ESCAPE                      &kp MINUS  &kp K        &kp T  &kp N  &kp S  &kp H
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp SEMI              &to 0                           &kp EQUAL  &kp G        &kp D  &kp M  &kp Z  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &kp BSPC   &lt 2 ENTER                       &kp J
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -95,11 +109,22 @@
 
         Symbols {
             bindings = <
-&kp BACKSLASH  &kp TILDE  &kp ASTERISK  &kp GRAVE  &trans                             &trans             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT    &trans
-&kp EXCL       &kp HASH   &kp DOLLAR    &kp CARET  &kp AMPERSAND  &trans      &trans  &kp SINGLE_QUOTE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE  &kp SEMICOLON
-&trans         &trans     &trans        &trans     &trans         &trans      &trans  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &kp COLON
-&trans         &trans     &trans        &trans     &trans         &trans      &trans  &trans                                                                    &trans
+&kp BACKSLASH  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp EXCL       &kp AT     &kp HASH              &kp DOLLAR             &kp PERCENT        &trans      &trans  &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp PIPE           &kp SEMICOLON
+&trans         &trans     &trans                &kp APOS               &kp DOUBLE_QUOTES  &trans      &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACE   &trans             &kp COLON
+&trans         &trans     &trans                &trans                 &trans             &trans      &trans  &trans                                                                            &trans
             >;
+        };
+
+        ARROWandMOUSE {
+            bindings = <
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                          &kp LC(T)        &trans    &mkp MB3  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp LC(V)  &kp LC(LS(TAB))  &mkp MB1  &mkp MB2  &trans  &kp LC(TAB)
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp LC(C)  &kp LC(W)        &mkp MB4  &mkp MB5  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans     &trans                                       &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         BT_select {
@@ -109,28 +134,6 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans          &trans          &trans        &trans           &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                         &bt BT_CLR_ALL
             >;
-        };
-
-        ARROWandMOUSE {
-            bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans    &mkp MB3  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &mkp MB4  &mkp MB5  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                              &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-        };
-
-        Onishi_layer {
-            bindings = <
-&kp Q             &kp L         &kp U         &kp COMMA             &kp DOT                                                          &kp F        &kp W  &kp R  &kp Y  &kp P
-&mt LCTRL E       &kp I         &kp A         &kp O                 &kp FSLH              &trans                          &kp MINUS  &kp K        &kp T  &kp N  &kp S  &kp H
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp SEMI              &to 0                           &kp EQUAL  &kp G        &kp D  &kp M  &kp Z  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 2 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BSPC   &lt 1 ENTER                       &kp J
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };
