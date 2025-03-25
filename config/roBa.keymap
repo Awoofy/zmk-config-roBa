@@ -89,7 +89,7 @@
         Default {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                 &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &lt_to_layer_0 5 P
-&kp A      &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE                      &kp MINUS  &kp H        &kp J  &kp K      &kp L    &kp SEMI
+&kp A      &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE                      &kp MINUS  &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMI
 &kp Z      &kp X         &kp C         &kp V                 &kp B                 &to 1                           &kp EQUAL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
 &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &kp BSPC   &lt 2 ENTER                             &lt 5 LEFT_GUI
             >;
@@ -100,7 +100,7 @@
         Onishi_layer {
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA             &kp DOT                                                          &kp F        &kp W  &kp R  &kp Y  &lt_to_layer_0 5 P
-&mt LCTRL E       &kp I         &kp A         &kp O                 &kp FSLH              &kp ESCAPE                      &kp MINUS  &kp K        &kp T  &kp N  &kp S  &kp H
+&mt LCTRL E       &kp I         &kp A         &kp O                 &kp FSLH              &kp ESCAPE                      &kp MINUS  &kp K        &kp T  &kp N  &kp S  &mt RCTRL H
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp SEMI              &to 0                           &kp EQUAL  &kp G        &kp D  &kp M  &kp Z  &kp B
 &kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &kp BSPC   &lt 2 ENTER                       &kp J
             >;
