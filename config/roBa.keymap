@@ -120,8 +120,8 @@
         Symbols {
             bindings = <
 &kp BACKSLASH  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH                                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&kp EXCL       &kp AT     &kp HASH              &kp DOLLAR             &kp PERCENT        &trans      &kp DELETE  &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp PIPE           &kp SEMICOLON
-&trans         &trans     &trans                &kp APOS               &kp DOUBLE_QUOTES  &trans      &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACE   &trans             &kp COLON
+&kp EXCL       &kp AT     &kp HASH              &kp DOLLAR             &kp PERCENT        &trans      &kp DELETE  &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp PIPE           &kp COLON
+&trans         &trans     &trans                &kp APOS               &kp DOUBLE_QUOTES  &trans      &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACE   &trans             &kp SEMI
 &trans         &trans     &trans                &trans                 &trans             &trans      &trans      &trans                                                                            &trans
             >;
         };
