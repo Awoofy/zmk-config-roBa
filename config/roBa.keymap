@@ -110,19 +110,19 @@
 
         NUMandFUNC {
             bindings = <
-&none         &none   &kp ASTERISK  &kp SLASH  &none                         &kp EQUAL  &kp PLUS  &kp MINUS  &none   &kp SINGLE_QUOTE
-&kp NUMBER_1  &kp N2  &kp N3        &kp N4     &kp N5  &trans       &none    &kp N6     &kp N7    &kp N8     &kp N9  &kp N0
-&kp F5        &kp F4  &kp F3        &kp F2     &kp F1  &kp F12      &kp F11  &kp F6     &kp F7    &kp F8     &kp F9  &kp F10
-&trans        &trans  &trans        &trans     &trans  &trans       &trans   &trans                                  &none
+&none         &none   &kp ASTERISK  &kp SLASH  &none                            &kp EQUAL  &kp PLUS  &kp MINUS  &none   &kp SINGLE_QUOTE
+&kp NUMBER_1  &kp N2  &kp N3        &kp N4     &kp N5  &trans       &kp DELETE  &kp N6     &kp N7    &kp N8     &kp N9  &kp N0
+&kp F5        &kp F4  &kp F3        &kp F2     &kp F1  &kp F12      &kp F11     &kp F6     &kp F7    &kp F8     &kp F9  &kp F10
+&trans        &trans  &trans        &trans     &trans  &trans       &trans      &trans                                  &none
             >;
         };
 
         Symbols {
             bindings = <
-&kp BACKSLASH  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&kp EXCL       &kp AT     &kp HASH              &kp DOLLAR             &kp PERCENT        &trans      &trans  &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp PIPE           &kp SEMICOLON
-&trans         &trans     &trans                &kp APOS               &kp DOUBLE_QUOTES  &trans      &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACE   &trans             &kp COLON
-&trans         &trans     &trans                &trans                 &trans             &trans      &trans  &trans                                                                            &trans
+&kp BACKSLASH  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH                                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp EXCL       &kp AT     &kp HASH              &kp DOLLAR             &kp PERCENT        &trans      &kp DELETE  &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp PIPE           &kp SEMICOLON
+&trans         &trans     &trans                &kp APOS               &kp DOUBLE_QUOTES  &trans      &trans      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACE   &trans             &kp COLON
+&trans         &trans     &trans                &trans                 &trans             &trans      &trans      &trans                                                                            &trans
             >;
         };
 
