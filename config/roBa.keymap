@@ -96,7 +96,7 @@
 &kp Q      &kp W         &kp E         &kp R                 &kp T                                                                             &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE                      &kp MINUS                   &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
 &kp Z      &kp X         &kp C         &kp V                 &kp B                 &to 1                           &kp EQUAL                   &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &mt LEFT_COMMAND BACKSPACE  &lt 2 ENTER                             &lt 5 LEFT_GUI
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 4 LC(SPACE)      &mt LEFT_COMMAND BACKSPACE  &lt 2 ENTER                             &lt 4 LEFT_GUI
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -107,7 +107,7 @@
 &kp Q             &kp L         &kp U         &kp COMMA             &kp DOT                                                                    &kp F        &kp W  &kp R  &kp Y  &kp P
 &mt LCTRL E       &kp I         &kp A         &kp O                 &kp FSLH              &kp ESCAPE                      &kp MINUS            &kp K        &kp T  &kp N  &kp S  &kp H
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp SEMI              &to 0                           &kp EQUAL            &kp G        &kp D  &kp M  &kp Z  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &mt LCTRL BACKSPACE  &lt 2 ENTER                       &kp J
+&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 0 LC(SPACE)      &mt LCTRL BACKSPACE  &lt 2 ENTER                       &kp J
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -140,15 +140,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-        };
-
-        BT_select {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans          &trans          &trans        &trans           &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                         &bt BT_CLR_ALL
-            >;
         };
     };
 };
